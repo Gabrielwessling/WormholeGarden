@@ -1,9 +1,12 @@
 {
 	"nodes":[
 		{"id":"385f61ce53728795","type":"text","text":"### [[World]]\nResponsável por segurar o save todo, é a primeira classe a ser carregada ao começar ou carregar um jogo.\n\n\t+ scenes     : List<Scene>\n\t+ spacemap   : Map\n\t+ planetmaps : List<Map>\n\t+ player     : Entity","x":-380,"y":-300,"width":460,"height":300},
-		{"id":"a7aca6e0c5bcf73f","type":"text","text":"### [[Scene]]\nSegura uma cena com regras próprias, por exemplo, normalmente temos uma cena pra \"planeta\", mas podendo carregar vários mapas de planeta diferentes, mas pra ir para o espaço aí sim precisamos de uma nova cena\n\n\t+ type     : SceneType\n\t+ map      : Map\n\t+ rules    : SceneRules","x":320,"y":60,"width":460,"height":340}
+		{"id":"a7aca6e0c5bcf73f","type":"text","text":"### [[Scene]]\nSegura uma cena com regras próprias, por exemplo, normalmente temos uma cena pra \"planeta\", mas podendo carregar vários mapas de planeta diferentes, mas pra ir para o espaço aí sim precisamos de uma nova cena\n\n\t+ type     : SceneType\n\t+ map      : Map\n\t+ rules    : SceneRules","x":320,"y":-320,"width":460,"height":340},
+		{"id":"ee94de7fa5dd33e9","type":"text","text":"### [[Map]]\nResponsável por segurar informações de um mapa, como tiles, vetores, entities etc\n```\n+ tiles             : List<Tile>\n+ anchors           : AnchorMap\n+ procGen           : MapGenerator\n+ handmadeLocations : Dict<Location, transform>\n+ locations         : List<Location>\n```","x":320,"y":100,"width":460,"height":340}
 	],
 	"edges":[
-		{"id":"707c1357e2c99cca","fromNode":"385f61ce53728795","fromSide":"right","toNode":"a7aca6e0c5bcf73f","toSide":"left","label":"scenes"}
+		{"id":"707c1357e2c99cca","fromNode":"385f61ce53728795","fromSide":"right","toNode":"a7aca6e0c5bcf73f","toSide":"left","label":"scenes"},
+		{"id":"076223ccb86a89e1","fromNode":"385f61ce53728795","fromSide":"bottom","toNode":"ee94de7fa5dd33e9","toSide":"top","label":"spacemap/planetmaps"},
+		{"id":"3a7bb8d1cd791e81","fromNode":"a7aca6e0c5bcf73f","fromSide":"right","toNode":"ee94de7fa5dd33e9","toSide":"right","label":"map"}
 	]
 }
