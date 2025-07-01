@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"385f61ce53728795","type":"text","text":"### [[World]]\nResponsável por segurar o save todo, é a primeira classe a ser carregada ao começar ou carregar um jogo.\n\n\t+ scenes     : List<Scene>\n\t+ spacemap   : Map\n\t+ planetmaps : List<Map>\n\t+ player     : Entity","x":-380,"y":-300,"width":460,"height":300},
+		{"id":"a7aca6e0c5bcf73f","type":"text","text":"### [[Scene]]\nSegura uma cena com regras próprias, por exemplo, normalmente temos uma cena pra \"planeta\", mas podendo carregar vários mapas de planeta diferentes, mas pra ir para o espaço aí sim precisamos de uma nova cena\n\n\t+ type     : SceneType\n\t+ map      : Map\n\t+ rules    : SceneRules","x":320,"y":60,"width":460,"height":340}
+	],
+	"edges":[
+		{"id":"707c1357e2c99cca","fromNode":"385f61ce53728795","fromSide":"right","toNode":"a7aca6e0c5bcf73f","toSide":"left","label":"scenes"}
+	]
+}
