@@ -11,14 +11,12 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
+                "file": "Img/World-Map Diagram.png"
               },
-              "icon": "lucide-file",
-              "title": "index"
+              "icon": "lucide-image",
+              "title": "World-Map Diagram"
             }
           }
         ]
@@ -182,20 +180,20 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Img/+UML Diagram SVG.svg",
+    "Img/World-Map Diagram.png",
+    "GDD/Visão Geral.md",
+    "Faltando na Wiki.md",
+    "index.md",
     "Arquitetura/UML Docs/+UML Índice.md",
     "Arquitetura/UML Docs/World System.md",
     "Arquitetura/UML Docs/+World-Map Diagram.md",
     "Arquitetura/UML Docs/+UML Diagram.md",
-    "Img/World-Map Diagram.png",
     "Img",
-    "GDD/Visão Geral.md",
     "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.png",
-    "Img/+UML Diagram SVG.svg",
-    "index.md",
     "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.svg",
     "Arquitetura/UML/+UML Diagram.canvas",
     "Map.md",
-    "Faltando na Wiki.md",
     "Arquitetura/UML/Scene.md",
     "Arquitetura/UML/World.md",
     "Arquitetura/UML",

@@ -14,4 +14,4 @@
 
 **Versionamento:** Git + GitHub
 
-**Modelagem:** [PlantUML](https://www.plantuml.com/plantuml/) para diagramas, Markdown para documentação (gerenciado pelo obsidian, site do github + Quartz pra transformar markdown puro em HTML)
+**Modelagem:** [PlantUML](https://www.plantuml.com/plantuml/) para diagramas, Markdown para documentação (gerenciado pelo obsidian, site do github + Quartz pra transformar markdown puro em uma wiki HTML)
