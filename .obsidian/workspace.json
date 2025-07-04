@@ -11,17 +11,14 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Arquitetura/UML/+UML Diagram.canvas",
-                "viewState": {
-                  "x": 204.74331743847137,
-                  "y": 251.3283553851847,
-                  "zoom": -0.7394229836706658
-                }
+                "file": "index.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "+UML Diagram"
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -81,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "6f3fbe92cc014b10",
@@ -169,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,13 +182,20 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Arquitetura/UML Docs/+UML Diagram PlantUML.md",
-    "Arquitetura/UML Docs/+UML Diagram SVG.svg",
-    "Arquitetura/UML/+UML Diagram.canvas",
     "Arquitetura/UML Docs/+UML Índice.md",
-    "index.md",
-    "Faltando na Wiki.md",
+    "Arquitetura/UML Docs/World System.md",
+    "Arquitetura/UML Docs/+World-Map Diagram.md",
+    "Arquitetura/UML Docs/+UML Diagram.md",
+    "Img/World-Map Diagram.png",
+    "Img",
     "GDD/Visão Geral.md",
+    "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.png",
+    "Img/+UML Diagram SVG.svg",
+    "index.md",
+    "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.svg",
+    "Arquitetura/UML/+UML Diagram.canvas",
+    "Map.md",
+    "Faltando na Wiki.md",
     "Arquitetura/UML/Scene.md",
     "Arquitetura/UML/World.md",
     "Arquitetura/UML",
@@ -203,7 +207,6 @@
     "GDD",
     "Arquitetura/UML Docs/Sistema de Entidades (Entity System).md",
     "Arquitetura/UML Docs/Componentes de Mapa (Map Components).md",
-    "Arquitetura/UML Docs/World System.md",
     "Arquitetura/UML Docs/Sistema de Itens (Item System).md",
     "Arquitetura/UML Docs/Sistema de Grid e Anchors (Grid Anchor System).md",
     "Arquitetura/UML Docs/Sistema de Construção e Materiais (Construction Recipes & Materials).md",

@@ -71,12 +71,12 @@ class Location {
 }
 
 class Tile {
-  + position: Vector2Int
-  + passable: bool
-  + prefabSlot: List<Slot>
-  + isInterior: bool
-  + building: Building
-  + entities: List<Entity>
++ position: Vector2Int
++ passable: bool
++ prefabSlot: List<Slot>
++ isInterior: bool
++ building: Building
++ entities: List<Entity>
 }
 
 class Building {

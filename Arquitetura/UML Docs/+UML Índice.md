@@ -2,6 +2,8 @@
 
 ## Índice
 
+- [[+World-Map Diagram]]
+- [[+UML Diagram]]
 - [[World System]]
 - [[Geração Procedural de Terreno (Terrain Generation)]]
 - [[Componentes de Mapa (Map Components)]]
