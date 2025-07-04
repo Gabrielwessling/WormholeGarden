@@ -11,12 +11,14 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Img/World-Map Diagram.png"
+                "file": "index.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "World-Map Diagram"
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -178,10 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "65b8742e10ed8d0a",
   "lastOpenFiles": [
-    "Img/+UML Diagram SVG.svg",
     "Img/World-Map Diagram.png",
+    "Img/+UML Diagram SVG.svg",
     "GDD/Visão Geral.md",
     "Faltando na Wiki.md",
     "index.md",
@@ -193,7 +195,7 @@
     "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.png",
     "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.svg",
     "Arquitetura/UML/+UML Diagram.canvas",
-    "Map.md",
+    "Arquitetura/UML/Map.md",
     "Arquitetura/UML/Scene.md",
     "Arquitetura/UML/World.md",
     "Arquitetura/UML",
