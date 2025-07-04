@@ -6,7 +6,7 @@ tags:
 Bem vindo aos documentos de criação de Wormhole, um jogo isométrico que mistura rpg, sobrevivência e simulação procedural/determinista em um pacote só.
 
 Artigos recomendados:
-- [[Visão Geral]]
+- [[1. Visão Geral]]
 - [[+UML Índice]]
 
 Explicação básica:

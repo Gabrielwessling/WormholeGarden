@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "GDD/Cenas, Mapas e World.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Cenas, Mapas e World"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 260.5
   },
   "right": {
     "id": "6f3fbe92cc014b10",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "GDD/Cenas, Mapas e World.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for Cenas, Mapas e World"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arquitetura/UML/+UML Diagram.canvas",
+                "file": "GDD/Cenas, Mapas e World.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from +UML Diagram"
+              "title": "Outgoing links from Cenas, Mapas e World"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arquitetura/UML/+UML Diagram.canvas",
+                "file": "GDD/Cenas, Mapas e World.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of +UML Diagram"
+              "title": "Outline of Cenas, Mapas e World"
             }
           },
           {
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 322.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,13 +180,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "65b8742e10ed8d0a",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "GDD/1. Visão Geral.md",
+    "GDD/Cenas, Mapas e World.md",
+    "index.md",
     "Img/World-Map Diagram.png",
     "Img/+UML Diagram SVG.svg",
-    "GDD/Visão Geral.md",
     "Faltando na Wiki.md",
-    "index.md",
     "Arquitetura/UML Docs/+UML Índice.md",
     "Arquitetura/UML Docs/World System.md",
     "Arquitetura/UML Docs/+World-Map Diagram.md",
