@@ -93,3 +93,5 @@ O editor permite:
 - Editar `MapMetaData` e propriedades gerais
 - Salvar mapas como jogáveis
 - Exportar o mapa como arquivo
+
+Next: Implementando o [[Editor]]

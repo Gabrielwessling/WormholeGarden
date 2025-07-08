@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDD/Cenas, Mapas e World.md",
+                "file": "To-Do Documents/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cenas, Mapas e World"
+              "title": "Classe Tile & Ferramenta Tile Manipulator - Deep Design"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GDD/Cenas, Mapas e World.md",
+                "file": "Devlogs/Maps, world and scenes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cenas, Mapas e World"
+              "title": "Outline of Maps, world and scenes"
             }
           },
           {
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,17 +177,28 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "homepage:Open homepage": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "GDD/1. Visão Geral.md",
-    "GDD/Cenas, Mapas e World.md",
     "index.md",
+    "To-Do Documents/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
+    "To-Do Documents",
+    "Devlogs/Maps, world and scenes.md",
+    "Devlogs/Build Module.md",
+    "GDD/Stack.md",
+    "Devlogs",
+    "Devlogs.md",
+    "Utilitário",
+    "Utilitário/Kanban.md",
+    "GDD/Editor.md",
+    "GDD/Cenas, Mapas e World.md",
     "Img/World-Map Diagram.png",
+    "GDD/1. Visão Geral.md",
     "Img/+UML Diagram SVG.svg",
-    "Faltando na Wiki.md",
+    "Utilitário/Faltando na Wiki.md",
     "Arquitetura/UML Docs/+UML Índice.md",
     "Arquitetura/UML Docs/World System.md",
     "Arquitetura/UML Docs/+World-Map Diagram.md",
@@ -211,8 +222,6 @@
     "Arquitetura/UML Docs/Sistema de Itens (Item System).md",
     "Arquitetura/UML Docs/Sistema de Grid e Anchors (Grid Anchor System).md",
     "Arquitetura/UML Docs/Sistema de Construção e Materiais (Construction Recipes & Materials).md",
-    "Arquitetura/UML Docs/Geração Procedural de Terreno (Terrain Generation).md",
-    "Arquitetura/UML Docs",
-    "note.md"
+    "Arquitetura/UML Docs"
   ]
 }
