@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "8bebec7c077abcd7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b44a65756390532e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4acdb71585921cb6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "UML Docs/+UML Diagram SVG.svg"
+              },
+              "icon": "lucide-image",
+              "title": "+UML Diagram SVG"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8ea2eaf7a9da60aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "017862d18ac077c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "260f2a6bddcfdae0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9958910e3e34b9a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a0366af07d597ec2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a94322db40372ac8",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b43fa5a434109b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b9c4e86fcf3f110e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Main Idea.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Main Idea"
+            }
+          },
+          {
+            "id": "fe9b9fa675fd64cd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Main Idea.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Main Idea"
+            }
+          },
+          {
+            "id": "92ab0a4e944f64ae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3050d48695aa52c0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Main Idea.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Main Idea"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4acdb71585921cb6",
+  "lastOpenFiles": [
+    "UML Docs/+UML Índice.md",
+    "UML Docs/+UML Diagram SVG.svg",
+    "UML Docs/+UML Diagram PlantUML.md",
+    "UML Docs/World System.md",
+    "UML Docs/Sistema de Grid e Anchors (Grid Anchor System).md",
+    "UML Docs/Geração Procedural de Terreno (Terrain Generation).md",
+    "UML Docs/Componentes de Mapa (Map Components).md",
+    "UML Docs/Sistema de Construção e Materiais (Construction Recipes & Materials).md",
+    "UML Docs/Sistema de Itens (Item System).md",
+    "UML Docs/Sistema de Entidades (Entity System).md",
+    "UML Docs/Sistema de Grid e Anchors.md",
+    "UML Docs",
+    "UML-Docs.md",
+    "UML.md",
+    "Modo de Visualização de Construção.md",
+    "Storyboard.canvas",
+    "Jogabilidade Life Sim.md",
+    "Systems/Materials, Recipes and Construction Systems.md",
+    "Dentro da Nave.md",
+    "Jogabilidade de Combate Pessoal.md",
+    "Jogador - TESSA.md",
+    "Systems",
+    "Planetas.md",
+    "Modo de Visualização de Energia.md",
+    "Jogabilidade Espacial.md",
+    "Estações Espaciais.md",
+    "Images/Pasted image 20250509154041.png",
+    "Images",
+    "Images/Pasted image 20250509150958.png",
+    "Images/game in energy mode 1.png",
+    "Images/image of the game 1.png",
+    "Images/image of the game.png",
+    "Images/game in energy mode.png"
+  ]
+}

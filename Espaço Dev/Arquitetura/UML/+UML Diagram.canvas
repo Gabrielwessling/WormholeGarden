@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"a7aca6e0c5bcf73f","type":"text","text":"### [[Scene]]\nSegura uma cena com regras próprias, por exemplo, normalmente temos uma cena pra \"planeta\", mas podendo carregar vários mapas de planeta diferentes, mas pra ir para o espaço aí sim precisamos de uma nova cena\n\n\t+ type     : SceneType\n\t+ map      : Map\n\t+ rules    : SceneRules","x":180,"y":-340,"width":460,"height":340},
+		{"id":"385f61ce53728795","type":"text","text":"### [[World]]\nResponsável por segurar o save todo, é a primeira classe a ser carregada ao começar ou carregar um jogo.\n\n\t+ scenes     : List<Scene>\n\t+ spacemap   : Map\n\t+ planetmaps : List<Map>\n\t+ player     : Entity","x":-440,"y":-320,"width":460,"height":300},
+		{"id":"ee94de7fa5dd33e9","type":"text","text":"### [[Map]]\nResponsável por segurar informações de um mapa, como tiles, vetores, entities etc\n```\n+ tiles             : List<Tile>\n+ anchors           : AnchorMap\n+ procGen           : MapGenerator\n+ handmadeLocations : Dict<Location, transform>\n+ locations         : List<Location>\n```","x":320,"y":40,"width":460,"height":340},
+		{"id":"85a36c3e1f63e1be","type":"text","text":"### [[Entity]]\nResponsável por segurar informações de um mapa, como tiles, vetores, entities etc\n```\n+ id: Guid\n+ gridPosition: Vector2Int\n+ components: Dictionary<Type, EntityComponent>\n```\n\n```\nHasComponent<T>()\nGetComponent<T>()\nvoid AddComponent<T>(T component)\nvoid RemoveComponent<T>(T component)\n```","x":150,"y":640,"width":490,"height":400},
+		{"id":"ab9c067f3b731daa","type":"text","text":"### [[AnchorMap]]\nResponsável por segurar informações de geometria do Grid e seus slots (center, border e intersection)\n```\n+ anchors: Dictionary<Vector2, GridAnchor>\n+ occupiedPositions: HashSet<Vector2>\n+ getAnchor(pos: Vector2): GridAnchor\n+ occupy(pos: Vector2, entity: Entity): void\n+ release(pos: Vector2): void\n+ isOccupied(pos: Vector2): bool\n```","x":1160,"y":160,"width":460,"height":340},
+		{"id":"eea3cfde511c09f5","type":"text","text":"### [[GridAnchor]]\nResponsável por segurar informações de geometria do Grid e seus slots (center, border e intersection)\n```\n+ position: Vector2         ' (2.0, 3.5), (2.5, 3.5), etc.\n+ anchorType: GridAnchorType\n+ occupant: Entity?\n```","x":1160,"y":-260,"width":460,"height":300},
+		{"id":"59b6021fb377bb13","x":1500,"y":-440,"width":426,"height":152,"type":"text","text":"#### ENUM: GridAnchorType\n- Center: Tile's center (int, int)\n- Border: Between 2 tiles (x+0.5, y), (x, y+0.5)\n- Intersection: Between 4 tiles (x+0.5, y+0.5)"},
+		{"id":"2d19347b7800395f","type":"text","text":"### [[Tile]]\nResponsável por segurar toda informação pertencente a uma tile única, como entities nela, componentes e qualquer outro data.\n```\n+ position: Vector2Int\n+ passable: bool\n+ prefabSlot: List<Slot>\n+ isInterior: bool\n+ building: Building\n+ entities: List<Entity>\n```","x":1160,"y":550,"width":460,"height":360}
+	],
+	"edges":[
+		{"id":"91b192aecbb496ec","fromNode":"eea3cfde511c09f5","fromSide":"bottom","toNode":"ab9c067f3b731daa","toSide":"top","label":"anchors"},
+		{"id":"694c5ac61b779d6a","fromNode":"ee94de7fa5dd33e9","fromSide":"right","toNode":"a7aca6e0c5bcf73f","toSide":"right","label":"map"},
+		{"id":"ad61ebba77af7721","fromNode":"ab9c067f3b731daa","fromSide":"left","toNode":"ee94de7fa5dd33e9","toSide":"right","label":"anchors"},
+		{"id":"760fe6f682d25118","fromNode":"59b6021fb377bb13","fromSide":"bottom","toNode":"eea3cfde511c09f5","toSide":"right","label":"type"},
+		{"id":"b05d5a624520c2c3","fromNode":"ee94de7fa5dd33e9","fromSide":"left","toNode":"385f61ce53728795","toSide":"bottom","label":"spacemap and planetmaps"},
+		{"id":"94b17a998f126ef9","fromNode":"a7aca6e0c5bcf73f","fromSide":"left","toNode":"385f61ce53728795","toSide":"right","label":"scenes"},
+		{"id":"9a30b0563130b105","fromNode":"2d19347b7800395f","fromSide":"left","toNode":"ee94de7fa5dd33e9","toSide":"right","label":"tiles"},
+		{"id":"0ff226aa32087ad2","fromNode":"85a36c3e1f63e1be","fromSide":"right","toNode":"ab9c067f3b731daa","toSide":"left","label":"occupant"}
+	]
+}
