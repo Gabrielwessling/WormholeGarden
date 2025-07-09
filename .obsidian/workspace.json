@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "To-Do Documents/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Classe Tile & Ferramenta Tile Manipulator - Deep Design"
+              "title": "index"
             }
           }
         ]
@@ -183,8 +183,8 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "index.md",
     "To-Do Documents/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
+    "index.md",
     "To-Do Documents",
     "Devlogs/Maps, world and scenes.md",
     "Devlogs/Build Module.md",
