@@ -5,6 +5,10 @@ tags:
 ---
 Bem vindo aos documentos de criação de Wormhole, um jogo isométrico que mistura rpg, sobrevivência e simulação procedural/determinista em um pacote só.
 
+Caso você seja um novo dev ou apenas um dev perdido, pode começar aqui pra entender tudo passo a passo de como trabalhar e entender esse projeto:
+
+[[0. Novos devs começam aqui]]
+
 Artigos recomendados:
 - [[1. Visão Geral]]
 - [[+UML Índice]]
@@ -21,4 +25,3 @@ Sempre que um sistema for alterado ou criado, documente:
 - Status de implementação
 
 [[+UML Diagram SVG.svg]]
-[Canvas](obsidian://open?vault=content&file=Arquitetura%2FUML%2F%2BUML%20Diagram.canvas)
