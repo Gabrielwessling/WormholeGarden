@@ -1,5 +1,3 @@
-
----
 # Headers
 # Isso é uma H1
 lorem ipsum

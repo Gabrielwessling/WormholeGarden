@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Espaço Dev/Utilitário/Markdown Dicas e Testes.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Markdown Dicas e Testes"
             }
           }
         ]
@@ -183,14 +183,15 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Espaço Dev/Utilitário/Faltando na Wiki.md",
     "Espaço Dev/Utilitário/Markdown Dicas e Testes.md",
+    "Espaço Dev/Guia de Contribuição/0. Novos devs começam aqui.md",
+    "Espaço Dev/Guia de Contribuição/1. Acessar o projeto no seu computador.md",
     "index.md",
     "Espaço Dev/To-Do/1. Kanban.md",
     "Espaço Dev/To-Do/0. Como utilizar o To-Do.md",
     "Espaço Dev/To-Do/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
     "Espaço Dev/Guia de Contribuição/2. Git.md",
-    "Espaço Dev/Guia de Contribuição/1. Acessar o projeto no seu computador.md",
-    "Espaço Dev/Guia de Contribuição/0. Novos devs começam aqui.md",
     "s.md",
     "Espaço Dev/To-Do/Novo UML.md",
     "Contato com a equipe/Contato. Gabriel Wessling.md",
@@ -221,7 +222,6 @@
     "Devlogs.md",
     "Espaço Dev/Utilitário",
     "Img/+UML Diagram SVG.svg",
-    "Espaço Dev/Utilitário/Faltando na Wiki.md",
     "Espaço Dev/Arquitetura/UML Docs/+UML Índice.md",
     "Espaço Dev/Arquitetura/UML Docs/World System.md",
     "Espaço Dev/Arquitetura/UML Docs/+World-Map Diagram.md",
