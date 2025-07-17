@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f19d184a646c87bf",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "ae5c7bb7451034b9",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Espaço Dev/To-Do/0. Como utilizar o To-Do.md",
-                "mode": "preview",
+                "file": "index.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "0. Como utilizar o To-Do"
+              "title": "index"
             }
           }
         ]
@@ -181,60 +181,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "09a3cfa0fb8f068a",
-    "type": "floating",
-    "children": [
-      {
-        "id": "a270548d9e9a9025",
-        "type": "window",
-        "children": [
-          {
-            "id": "1416f270859e41e0",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e06fdf7ae104bee9",
-                "type": "leaf",
-                "state": {
-                  "type": "kanban",
-                  "state": {
-                    "file": "Espaço Dev/To-Do/1. Kanban.md",
-                    "kanbanViewState": {
-                      "kanban-plugin": "list",
-                      "list-collapse": [
-                        false,
-                        false,
-                        false,
-                        false,
-                        false
-                      ]
-                    }
-                  },
-                  "icon": "lucide-trello",
-                  "title": "1. Kanban"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -8,
-        "y": 56,
-        "width": 1936,
-        "height": 1064,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "ae5c7bb7451034b9",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Markdown Dicas e Testes.md",
-    "Espaço Dev/To-Do/0. Como utilizar o To-Do.md",
-    "Espaço Dev/To-Do/1. Kanban.md",
-    "Espaço Dev/To-Do/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
+    "Espaço Dev/Utilitário/Markdown Dicas e Testes.md",
     "index.md",
+    "Espaço Dev/To-Do/1. Kanban.md",
+    "Espaço Dev/To-Do/0. Como utilizar o To-Do.md",
+    "Espaço Dev/To-Do/Classe Tile & Ferramenta Tile Manipulator - Deep Design.md",
     "Espaço Dev/Guia de Contribuição/2. Git.md",
     "Espaço Dev/Guia de Contribuição/1. Acessar o projeto no seu computador.md",
     "Espaço Dev/Guia de Contribuição/0. Novos devs começam aqui.md",
