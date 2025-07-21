@@ -121,12 +121,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Espaço Dev/To-Do/1. Kanban.md",
+                "file": "0002 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para 1. Kanban"
+              "title": "Links de saída para 0002 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving"
             }
           },
           {
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Espaço Dev/To-Do/1. Kanban.md",
+                "file": "0002 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Kanban"
+              "title": "Sumário de 0002 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving"
             }
           },
           {
@@ -174,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,15 +186,24 @@
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-kanban:Criar um novo quadro": false,
       "homepage:Open homepage": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Espaço Dev/To-Do/Rework - Ferramenta Tile Manipulator.md",
+    "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
     "Espaço Dev/To-Do/1. Kanban.md",
-    "Espaço Dev/To-Do/Novo UML.md",
+    "Espaço Dev/To-Do/Kanban Issues/Ligação automática de Palette e UI Elements.md",
+    "Espaço Dev/To-Do/Kanban Issues/0 task model.md",
+    "Template Plugin/criar-novas tarefas.md",
+    "Template Plugin",
+    "Espaço Dev/To-Do/Kanban Issues",
     "index.md",
+    "Espaço Dev/Arquitetura/UML Docs/+UML Índice.md",
+    "Espaço Dev/GDD/1. Visão Geral.md",
+    "Espaço Dev/To-Do/Rework - Ferramenta Tile Manipulator.md",
+    "Espaço Dev/To-Do/Novo UML.md",
     "0001. Criar LineRenderer procedural ao redor da área configurada do mapa, com material específico e destruindo informação fora das borders..md",
     "Espaço Dev/Engineering/Stack.md",
     "Espaço Dev/GDD/Cenas, Mapas e World.md",
@@ -213,15 +222,11 @@
     "Espaço Dev/Guia de Contribuição",
     "Espaço Dev/Arquitetura/UML/+UML Diagram.canvas",
     "Espaço Dev/To-Do Documents/MapEditingUI changes.md",
-    "Espaço Dev/GDD/1. Visão Geral.md",
     "Espaço Dev/Engineering",
     "Devlogs/0. Build Module (en).md",
-    "Devlogs/1. Devlog 1 (pt-br).md",
     "Img/plantuml.png",
     "Img/World-Map Diagram.png",
     "Img/Gravação+de+Tela+2025-07-08+154432.gif",
-    "Espaço Dev/Arquitetura/UML Docs/+UML Diagram.md",
-    "Devlogs/0. Maps, world and scenes (en).md",
     "Espaço Dev",
     "Img/Gravação+de+Tela+2025-06-17+155730.gif",
     "Img/Gravação+de+Tela+2025-07-08+132824.gif",
@@ -229,14 +234,10 @@
     "Gravação+de+Tela+2025-07-08+154432 1.gif",
     "Espaço Dev/To-Do",
     "Devlogs",
-    "Devlogs.md",
     "Espaço Dev/Utilitário",
     "Img/+UML Diagram SVG.svg",
-    "Espaço Dev/Arquitetura/UML Docs/+UML Índice.md",
     "Img",
     "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.png",
-    "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.svg",
-    "Espaço Dev/Arquitetura/UML",
-    "www.plantuml.com"
+    "XLLRR-mq47xFhp1FB6AFa11FqQ6SNbOzIDkBo4A540-poPoi9SUExCcg4UA_CtOSnmrTw4Ct-RxnpEUvJ3uv0aj3fuglw8GTYbw1r4NnjVZnmXzJBq-_xE_4T-BX-fd_LxUxnvseVgyEkuV_EbVK2fmJByQgHlnL2F6jwA1tfTXBHnyVeByA60iOqPPYfqdI6A2zWORvZOOEI-78Ijr-Ku.svg"
   ]
 }

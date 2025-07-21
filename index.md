@@ -11,6 +11,8 @@ Artigos recomendados:
 - [[1. Visão Geral]]
 - [[+UML Índice]]
 
+- [[1. Kanban]] - o que fazer quando não se têm o que fazer.
+---
 **Explicação básica:**
 - Contato com a Equipe: Espaço pra achar formas de se comunicar com pessoas importantes no projeto.
 - Devlogs: Devlogs são primariamente criados aqui e colocados em outros sites depois.
