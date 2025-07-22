@@ -11,22 +11,14 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Espaço Dev/To-Do/1. Kanban.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "Espaço Dev/Arquitetura/UML Docs/+UML Diagram.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "1. Kanban"
+              "icon": "lucide-file",
+              "title": "+UML Diagram"
             }
           }
         ]
@@ -186,20 +178,25 @@
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-kanban:Criar um novo quadro": false,
       "homepage:Open homepage": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
+    "Espaço Dev/Arquitetura/UML/World.md",
+    "Espaço Dev/Arquitetura/UML/Scene.md",
+    "Espaço Dev/Arquitetura/UML/Map.md",
+    "Espaço Dev/Arquitetura/UML/+UML Diagram.canvas",
+    "Devlogs/0. Build Module (en).md",
+    "Contato com a equipe/Contato. Gabriel Wessling.md",
+    "index.md",
     "Espaço Dev/To-Do/1. Kanban.md",
+    "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
     "Espaço Dev/To-Do/Kanban Issues/Ligação automática de Palette e UI Elements.md",
     "Espaço Dev/To-Do/Kanban Issues/0 task model.md",
     "Template Plugin/criar-novas tarefas.md",
     "Template Plugin",
     "Espaço Dev/To-Do/Kanban Issues",
-    "index.md",
     "Espaço Dev/Arquitetura/UML Docs/+UML Índice.md",
     "Espaço Dev/GDD/1. Visão Geral.md",
     "Espaço Dev/To-Do/Rework - Ferramenta Tile Manipulator.md",
@@ -215,15 +212,9 @@
     "Espaço Dev/Utilitário/Faltando na Wiki.md",
     "Espaço Dev/Guia de Contribuição/0. Novos devs começam aqui.md",
     "Espaço Dev/Guia de Contribuição/1. Acessar o projeto no seu computador.md",
-    "Espaço Dev/Guia de Contribuição/2. Git.md",
-    "s.md",
-    "Contato com a equipe/Contato. Gabriel Wessling.md",
     "Contato com a equipe",
     "Espaço Dev/Guia de Contribuição",
-    "Espaço Dev/Arquitetura/UML/+UML Diagram.canvas",
-    "Espaço Dev/To-Do Documents/MapEditingUI changes.md",
     "Espaço Dev/Engineering",
-    "Devlogs/0. Build Module (en).md",
     "Img/plantuml.png",
     "Img/World-Map Diagram.png",
     "Img/Gravação+de+Tela+2025-07-08+154432.gif",

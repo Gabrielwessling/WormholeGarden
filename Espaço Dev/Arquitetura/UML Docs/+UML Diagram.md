@@ -1,300 +1,291 @@
-``` plantuml-svg
-@startuml
-!theme plain
-' ========================
-' World System
-' ========================
-class World {
-  + scenes: List<Scene>
-  + spaceMap: Map
-  + planets: List<Map>
-  + player: Entity
-}
+```mermaid
+classDiagram
+  direction TB
 
-class Scene {
-  + type: SceneType
-  + map: Map
-  + rules: SceneRules
-}
+  %% World System
+  class World {
+    +scenes: List~Scene~
+    +spaceMap: Map
+    +planets: List~Map~
+    +player: Entity
+  }
 
-class Map {
-  + tiles: List<Tile>
-  + anchors: AnchorMap
-  + procGen: MapGenerator
-  + handmadeLocations: Dict<Location, transform>
-  + locations: List<Location>
-}
+  class Scene {
+    +type: SceneType
+    +map: Map
+    +rules: SceneRules
+  }
 
-World --> Scene : scenes
-World --> Map : spaceMap
-Scene --> Map : map
-Map --> Tile : tiles
-Map --> AnchorMap : anchors
-Tile --> GridAnchor : centerAnchor [1..1]
-GridAnchor --> Tile : tile [0..1]
-AnchorMap --> GridAnchor : anchors
+  class Map {
+    +tiles: List~Tile~
+    +anchors: AnchorMap
+    +procGen: MapGenerator
+    +handmadeLocations: Dict~Location, transform~
+    +locations: List~Location~
+  }
 
-' ========================
-' Terrain Generation
-' ========================
-class TerrainGeneration {
-  + noiseLayers: List<NoiseLayer>
-  + faultMap: float[][]
-  + elevationCurve: AnimationCurve
-}
+  World --> Scene : scenes
+  World --> Map : spaceMap
+  Scene --> Map : map
+  Map --> Tile : tiles
+  Map --> AnchorMap : anchors
 
-class Heatmaps {
-  + temperature: float[][]
-  + humidity: float[][]
-  + altitude: float[][]
-  + drainage: float[][]
-}
+  %% Terrain Generation
+  class TerrainGeneration {
+    +noiseLayers: List~NoiseLayer~
+    +faultMap: float[][]
+    +elevationCurve: AnimationCurve
+  }
 
-class Biome {
-  + rainfall: [float min, float max]
-  + temperature: [float min, float max]
-  + elevation: [float min, float max]
-  + flora: List<Entity>
-  + fauna: List<Entity>
-  + geology: geologicalData
-}
+  class Heatmaps {
+    +temperature: float[][]
+    +humidity: float[][]
+    +altitude: float[][]
+    +drainage: float[][]
+  }
 
-TerrainGeneration --> Heatmaps : produces
-Heatmaps --> Biome : determines
+  class Biome {
+    +rainfall: [float min, float max]
+    +temperature: [float min, float max]
+    +elevation: [float min, float max]
+    +flora: List~Entity~
+    +fauna: List~Entity~
+    +geology: geologicalData
+  }
 
-' ========================
-' Map Components
-' ========================
-class Location {
-  + buildings: List<Building>
-  + actors: List<Entity>
-}
+  TerrainGeneration --> Heatmaps : produces
+  Heatmaps --> Biome : determines
 
-class Tile {
-+ position: Vector2Int
-+ passable: bool
-+ prefabSlot: List<Slot>
-+ isInterior: bool
-+ building: Building
-+ entities: List<Entity>
-}
+  %% Map Components
+  class Location {
+    +buildings: List~Building~
+    +actors: List~Entity~
+  }
 
-class Building {
-  + tiles: List<Tile>
-  + isAirTight: bool
-  + category: BuildingType
-}
+  class Tile {
+    +position: Vector2Int
+    +passable: bool
+    +prefabSlot: List~Slot~
+    +isInterior: bool
+    +building: Building
+    +entities: List~Entity~
+  }
 
-class ArchaeologySite {
-  + ancientFootprint: float
-  + discovered: bool
-  + culture: CultureData
-}
+  class Building {
+    +tiles: List~Tile~
+    +isAirTight: bool
+    +category: BuildingType
+  }
 
-class DungeonEntrance {
-  + entrance: Vector2Int
-  + dangerRating: int
-  + dungeon: DungeonData
-}
+  class ArchaeologySite {
+    +ancientFootprint: float
+    +discovered: bool
+    +culture: CultureData
+  }
 
-class Settlement {
-  + economy: float
-  + leisure: float
-  + freedom: float
-  + government: RegimeData
-}
+  class DungeonEntrance {
+    +entrance: Vector2Int
+    +dangerRating: int
+    +dungeon: DungeonData
+  }
 
-Location --> Building : buildings
-Location --> Entity : actors
-Tile --> Building : building
-Tile --> Entity : entities
-Building --> Tile : tiles
-Biome --> Tile : affects
-Biome --> Building : influences
+  class Settlement {
+    +economy: float
+    +leisure: float
+    +freedom: float
+    +government: RegimeData
+  }
 
-Location <|-- ArchaeologySite
-Location <|-- DungeonEntrance
-Location <|-- Settlement
+  Location --> Building : buildings
+  Location --> Entity : actors
+  Tile --> Building : building
+  Tile --> Entity : entities
+  Building --> Tile : tiles
+  Biome --> Tile : affects
+  Biome --> Building : influences
 
-' ========================
-' Grid Anchor System
-' ========================
-class GridAnchor {
-  + position: Vector2         ' (2.0, 3.5), (2.5, 3.5), etc.
-  + anchorType: GridAnchorType
-  + occupant: Entity?
-}
+  Location <|-- ArchaeologySite
+  Location <|-- DungeonEntrance
+  Location <|-- Settlement
 
-enum GridAnchorType {
-  Tile          ' tile's center (int, int)
-  Border        ' between 2 tiles (x+0.5, y), (x, y+0.5)
-  Intersection  ' between 4 tiles (x+0.5, y+0.5)
-}
+  %% Grid Anchor System
+  class GridAnchor {
+    +position: Vector2
+    +anchorType: GridAnchorType
+    +occupant: Entity?
+  }
 
-class AnchorMap {
-  + anchors: Dictionary<Vector2, GridAnchor>
-  + occupiedPositions: HashSet<Vector2>
-  + getAnchor(pos: Vector2): GridAnchor
-  + occupy(pos: Vector2, entity: Entity): void
-  + release(pos: Vector2): void
-  + isOccupied(pos: Vector2): bool
-}
+  class GridAnchorType {
+    <<enumeration>>
+    Tile
+    Border
+    Intersection
+  }
 
-GridAnchor --> Entity : occupant
-AnchorMap --> GridAnchor : manages
-GridAnchorType --> GridAnchor : AnchorType
+  class AnchorMap {
+    +anchors: Dictionary~Vector2, GridAnchor~
+    +occupiedPositions: HashSet~Vector2~
+    +getAnchor(pos: Vector2): GridAnchor
+    +occupy(pos: Vector2, entity: Entity): void
+    +release(pos: Vector2): void
+    +isOccupied(pos: Vector2): bool
+  }
 
-' ========================
-' Entity System
-' ========================
-class Entity {
-  + id: Guid
-  + gridPosition: Vector2Int
-  + components: Dictionary<Type, EntityComponent>
-}
+  Tile --> GridAnchor : centerAnchor [1..1]
+  GridAnchor --> Tile : tile [0..1]
+  AnchorMap --> GridAnchor : anchors
+  GridAnchor --> Entity : occupant
+  AnchorMap --> GridAnchor : manages
+  GridAnchorType --> GridAnchor : AnchorType
 
-class EntityComponent <<abstract>> {
-}
+  %% Entity System
+  class Entity {
+    +id: Guid
+    +gridPosition: Vector2Int
+    +components: Dictionary~Type, EntityComponent~
+  }
 
-class Actor {
-  + isAlive: bool
-  + model: GameObject
-  + animationSet: AnimationSet
-  + worldPos: Vector3
-}
+  class EntityComponent {
+    <<abstract>>
+  }
 
-class Construction {
-  + model: GameObject
-  + slotsOccupied: List<SlotType>
-  + materialComposition: List<ItemData>
-}
+  class Actor {
+    +isAlive: bool
+    +model: GameObject
+    +animationSet: AnimationSet
+    +worldPos: Vector3
+  }
 
-class Furniture {
-  + model: GameObject
-  + gridSize: List<Vector2Int>
-  + occupiedTiles: List<Tile>
-  + isPassable: bool
-  + isInteractable: bool
-  + onInteract(actor: Entity): void
-}
+  class Construction {
+    +model: GameObject
+    +slotsOccupied: List~SlotType~
+    +materialComposition: List~ItemData~
+  }
 
-class ItemEntity {
-  + model: GameObject
-  + offset: Vector3
-}
+  class Furniture {
+    +model: GameObject
+    +gridSize: List~Vector2Int~
+    +occupiedTiles: List~Tile~
+    +isPassable: bool
+    +isInteractable: bool
+    +onInteract(actor: Entity): void
+  }
 
-Entity <|-- Actor
-Entity <|-- Construction
-Entity <|-- Furniture
-Entity <|-- ItemEntity
-Entity --> EntityComponent : has
+  class ItemEntity {
+    +model: GameObject
+    +offset: Vector3
+  }
 
-World --> Entity : player
-Tile --> Entity : entities
+  Entity <|-- Actor
+  Entity <|-- Construction
+  Entity <|-- Furniture
+  Entity <|-- ItemEntity
+  Entity --> EntityComponent : has
+  World --> Entity : player
+  Tile --> Entity : entities
 
-' ========================
-' Construction Recipes & Materials
-' ========================
-class Recipe {
-  + name: string
-  + prefab: GameObject
-  + occupiedSlots: List<SlotOccupation>
-  + parts: List<ConstructionPart>
-  + placementRules: List<PlacementRule>
-  + rotations: List<RotationData>
-}
+  %% Construction Recipes & Materials
+  class Recipe {
+    +name: string
+    +prefab: GameObject
+    +occupiedSlots: List~SlotOccupation~
+    +parts: List~ConstructionPart~
+    +placementRules: List~PlacementRule~
+    +rotations: List~RotationData~
+  }
 
-class SlotOccupation {
-  + slotType: SlotType    ' Ex: WallN, Floor, Ceiling
-}
+  class SlotOccupation {
+    +slotType: SlotType
+  }
 
-class ConstructionPart {
-  + partName: string
-  + acceptedMaterials: List<MaterialOption>
-}
+  class ConstructionPart {
+    +partName: string
+    +acceptedMaterials: List~MaterialOption~
+  }
 
-class MaterialOption {
-  + minItemId: string     ' Hierarquia mínima, ex: "metal.ingot"
-  + texture: Texture2D    ' Textura em grayscale
-}
+  class MaterialOption {
+    +minItemId: string
+    +texture: Texture2D
+  }
 
-class RotationData {
-  + rotationAngle: float
-  + slotOverrides: List<SlotOccupation>
-}
+  class RotationData {
+    +rotationAngle: float
+    +slotOverrides: List~SlotOccupation~
+  }
 
-class PlacementRule {
-  + description: string
-  + validate(tile: Tile): bool
-}
+  class PlacementRule {
+    +description: string
+    +validate(tile: Tile): bool
+  }
 
-' ========================
-' Relations for Construction System
-' ========================
-Construction --> Recipe : uses
-Recipe --> SlotOccupation : occupies
-Recipe --> ConstructionPart : defines parts
-Recipe --> PlacementRule : has rules
-Recipe --> RotationData : supports
-ConstructionPart --> MaterialOption : accepts
-RotationData --> SlotOccupation : overrides
+  Construction --> Recipe : uses
+  Recipe --> SlotOccupation : occupies
+  Recipe --> ConstructionPart : defines parts
+  Recipe --> PlacementRule : has rules
+  Recipe --> RotationData : supports
+  ConstructionPart --> MaterialOption : accepts
+  RotationData --> SlotOccupation : overrides
 
-' ========================
-' Item System
-' ========================
-class ItemData {
-  + id: string                'Ex: "metal.ingot.iron"'
-  + tint: Color
-  + components: List<ItemComponent>
-}
+  %% Item System
+  class ItemData {
+    +id: string
+    +tint: Color
+    +components: List~ItemComponent~
+  }
 
-class ItemComponent <<abstract>> {
-  + UID
-}
+  class ItemComponent {
+    <<abstract>>
+    +UID
+  }
 
-class Consumable {
-  + isPercentageBased: bool   'will you consume 20% of an item or 3 items'
-}
-class Flammable {
-  + flammability: float
-}
-class Metallic {
-  + reflectiveness: float
-  + meltingPoint: float
-  + hardness: float
-  + electricConductiveness: float
-  + corrosionResistance: float
-}
-class Nutritional
-class Weight {
-  + value: float
-}
-class Stackable {
-  + maxStack: int
-}
-class Equippable {
-  + neededLimbs: List<LimbType>
-  + occupiedSlots: List<LimbSlot>
-}
-class ObjectiveValue {
-  + baseValue: float
-}
-class EntityPrefab {
-  + entity: ItemEntity
-}
+  class Consumable {
+    +isPercentageBased: bool
+  }
 
-ItemData --> ItemComponent : has
-ItemComponent <|-- Consumable
-ItemComponent <|-- Flammable
-ItemComponent <|-- Metallic
-ItemComponent <|-- Nutritional
-ItemComponent <|-- Weight
-ItemComponent <|-- Stackable
-ItemComponent <|-- Equippable
-ItemComponent <|-- ObjectiveValue
-ItemComponent <|-- EntityPrefab
+  class Flammable {
+    +flammability: float
+  }
 
-MaterialOption --> ItemData : selects
-@enduml
+  class Metallic {
+    +reflectiveness: float
+    +meltingPoint: float
+    +hardness: float
+    +electricConductiveness: float
+    +corrosionResistance: float
+  }
+
+  class Nutritional
+  class Weight {
+    +value: float
+  }
+
+  class Stackable {
+    +maxStack: int
+  }
+
+  class Equippable {
+    +neededLimbs: List~LimbType~
+    +occupiedSlots: List~LimbSlot~
+  }
+
+  class ObjectiveValue {
+    +baseValue: float
+  }
+
+  class EntityPrefab {
+    +entity: ItemEntity
+  }
+
+  ItemData --> ItemComponent : has
+  ItemComponent <|-- Consumable
+  ItemComponent <|-- Flammable
+  ItemComponent <|-- Metallic
+  ItemComponent <|-- Nutritional
+  ItemComponent <|-- Weight
+  ItemComponent <|-- Stackable
+  ItemComponent <|-- Equippable
+  ItemComponent <|-- ObjectiveValue
+  ItemComponent <|-- EntityPrefab
+  MaterialOption --> ItemData : selects
 ```
 
