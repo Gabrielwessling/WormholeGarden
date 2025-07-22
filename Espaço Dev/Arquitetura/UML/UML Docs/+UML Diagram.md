@@ -1,12 +1,10 @@
 ```mermaid
 classDiagram
-  direction TB
-
   %% World System
   class World {
-    +scenes: List~Scene~
+    +scenes: "List<Scene>"
     +spaceMap: Map
-    +planets: List~Map~
+    +planets: "List<Map>"
     +player: Entity
   }
 
@@ -17,62 +15,62 @@ classDiagram
   }
 
   class Map {
-    +tiles: List~Tile~
+    +tiles: "List<Tile>"
     +anchors: AnchorMap
     +procGen: MapGenerator
-    +handmadeLocations: Dict~Location, transform~
-    +locations: List~Location~
+    +handmadeLocations: "Dict<Location, Transform>"
+    +locations: "List<Location>"
   }
 
-  World --> Scene : scenes
-  World --> Map : spaceMap
-  Scene --> Map : map
-  Map --> Tile : tiles
-  Map --> AnchorMap : anchors
+  World "1" *-- "*" Scene : scenes
+  World "1" *-- "1" Map : spaceMap
+  Scene "1" *-- "1" Map : map
+  Map "1" *-- "*" Tile : tiles
+  Map "1" *-- "1" AnchorMap : anchors
 
   %% Terrain Generation
   class TerrainGeneration {
-    +noiseLayers: List~NoiseLayer~
-    +faultMap: float[][]
+    +noiseLayers: "List<NoiseLayer>"
+    +faultMap: "float[][]"
     +elevationCurve: AnimationCurve
   }
 
   class Heatmaps {
-    +temperature: float[][]
-    +humidity: float[][]
-    +altitude: float[][]
-    +drainage: float[][]
+    +temperature: "float[][]"
+    +humidity: "float[][]"
+    +altitude: "float[][]"
+    +drainage: "float[][]"
   }
 
   class Biome {
-    +rainfall: [float min, float max]
-    +temperature: [float min, float max]
-    +elevation: [float min, float max]
-    +flora: List~Entity~
-    +fauna: List~Entity~
-    +geology: geologicalData
+    +rainfall: "Range"
+    +temperature: "Range"
+    +elevation: "Range"
+    +flora: "List<Entity>"
+    +fauna: "List<Entity>"
+    +geology: GeologicalData
   }
 
-  TerrainGeneration --> Heatmaps : produces
-  Heatmaps --> Biome : determines
+  TerrainGeneration ..> Heatmaps : produces
+  Heatmaps ..> Biome : determines
 
   %% Map Components
   class Location {
-    +buildings: List~Building~
-    +actors: List~Entity~
+    +buildings: "List<Building>"
+    +actors: "List<Entity>"
   }
 
   class Tile {
     +position: Vector2Int
     +passable: bool
-    +prefabSlot: List~Slot~
+    +prefabSlot: "List<Slot>"
     +isInterior: bool
     +building: Building
-    +entities: List~Entity~
+    +entities: "List<Entity>"
   }
 
   class Building {
-    +tiles: List~Tile~
+    +tiles: "List<Tile>"
     +isAirTight: bool
     +category: BuildingType
   }
@@ -96,13 +94,13 @@ classDiagram
     +government: RegimeData
   }
 
-  Location --> Building : buildings
-  Location --> Entity : actors
-  Tile --> Building : building
-  Tile --> Entity : entities
-  Building --> Tile : tiles
-  Biome --> Tile : affects
-  Biome --> Building : influences
+  Location "1" *-- "*" Building : buildings
+  Location "1" *-- "*" Entity : actors
+  Tile "1" *-- "0..1" Building : building
+  Tile "1" *-- "*" Entity : entities
+  Building "1" *-- "*" Tile : tiles
+  Biome ..> Tile : affects
+  Biome ..> Building : influences
 
   Location <|-- ArchaeologySite
   Location <|-- DungeonEntrance
@@ -112,7 +110,7 @@ classDiagram
   class GridAnchor {
     +position: Vector2
     +anchorType: GridAnchorType
-    +occupant: Entity?
+    +occupant: Entity
   }
 
   class GridAnchorType {
@@ -123,26 +121,25 @@ classDiagram
   }
 
   class AnchorMap {
-    +anchors: Dictionary~Vector2, GridAnchor~
-    +occupiedPositions: HashSet~Vector2~
-    +getAnchor(pos: Vector2): GridAnchor
-    +occupy(pos: Vector2, entity: Entity): void
-    +release(pos: Vector2): void
-    +isOccupied(pos: Vector2): bool
+    +anchors: "Dict<Vector2, GridAnchor>"
+    +occupiedPositions: "Set<Vector2>"
+    +getAnchor(pos: Vector2) GridAnchor
+    +occupy(pos: Vector2, entity: Entity) void
+    +release(pos: Vector2) void
+    +isOccupied(pos: Vector2) bool
   }
 
-  Tile --> GridAnchor : centerAnchor [1..1]
-  GridAnchor --> Tile : tile [0..1]
-  AnchorMap --> GridAnchor : anchors
-  GridAnchor --> Entity : occupant
-  AnchorMap --> GridAnchor : manages
-  GridAnchorType --> GridAnchor : AnchorType
+  Tile "1" -- "1" GridAnchor : centerAnchor
+  GridAnchor "1" -- "0..1" Tile : tile
+  AnchorMap "1" *-- "*" GridAnchor : anchors
+  GridAnchor "1" -- "0..1" Entity : occupant
+  GridAnchorType -- GridAnchor : anchorType
 
   %% Entity System
   class Entity {
     +id: Guid
     +gridPosition: Vector2Int
-    +components: Dictionary~Type, EntityComponent~
+    +components: "Dict<Type, EntityComponent>"
   }
 
   class EntityComponent {
@@ -158,17 +155,17 @@ classDiagram
 
   class Construction {
     +model: GameObject
-    +slotsOccupied: List~SlotType~
-    +materialComposition: List~ItemData~
+    +slotsOccupied: "List<SlotType>"
+    +materialComposition: "List<ItemData>"
   }
 
   class Furniture {
     +model: GameObject
-    +gridSize: List~Vector2Int~
-    +occupiedTiles: List~Tile~
+    +gridSize: "List<Vector2Int>"
+    +occupiedTiles: "List<Tile>"
     +isPassable: bool
     +isInteractable: bool
-    +onInteract(actor: Entity): void
+    +onInteract(actor: Entity) void
   }
 
   class ItemEntity {
@@ -180,18 +177,18 @@ classDiagram
   Entity <|-- Construction
   Entity <|-- Furniture
   Entity <|-- ItemEntity
-  Entity --> EntityComponent : has
-  World --> Entity : player
-  Tile --> Entity : entities
+  Entity "1" *-- "*" EntityComponent : components
+  World "1" *-- "1" Entity : player
+  Tile "1" *-- "*" Entity : entities
 
   %% Construction Recipes & Materials
   class Recipe {
     +name: string
     +prefab: GameObject
-    +occupiedSlots: List~SlotOccupation~
-    +parts: List~ConstructionPart~
-    +placementRules: List~PlacementRule~
-    +rotations: List~RotationData~
+    +occupiedSlots: "List<SlotOccupation>"
+    +parts: "List<ConstructionPart>"
+    +placementRules: "List<PlacementRule>"
+    +rotations: "List<RotationData>"
   }
 
   class SlotOccupation {
@@ -200,7 +197,7 @@ classDiagram
 
   class ConstructionPart {
     +partName: string
-    +acceptedMaterials: List~MaterialOption~
+    +acceptedMaterials: "List<MaterialOption>"
   }
 
   class MaterialOption {
@@ -210,32 +207,31 @@ classDiagram
 
   class RotationData {
     +rotationAngle: float
-    +slotOverrides: List~SlotOccupation~
+    +slotOverrides: "List<SlotOccupation>"
   }
 
   class PlacementRule {
     +description: string
-    +validate(tile: Tile): bool
+    +validate(tile: Tile) bool
   }
 
-  Construction --> Recipe : uses
-  Recipe --> SlotOccupation : occupies
-  Recipe --> ConstructionPart : defines parts
-  Recipe --> PlacementRule : has rules
-  Recipe --> RotationData : supports
-  ConstructionPart --> MaterialOption : accepts
-  RotationData --> SlotOccupation : overrides
+  Construction ..> Recipe : uses
+  Recipe "1" *-- "*" SlotOccupation : occupies
+  Recipe "1" *-- "*" ConstructionPart : defines
+  Recipe "1" *-- "*" PlacementRule : rules
+  Recipe "1" *-- "*" RotationData : rotations
+  ConstructionPart "1" *-- "*" MaterialOption : accepts
+  RotationData "1" *-- "*" SlotOccupation : overrides
 
   %% Item System
   class ItemData {
     +id: string
     +tint: Color
-    +components: List~ItemComponent~
+    +components: "List<ItemComponent>"
   }
 
   class ItemComponent {
     <<abstract>>
-    +UID
   }
 
   class Consumable {
@@ -254,7 +250,10 @@ classDiagram
     +corrosionResistance: float
   }
 
-  class Nutritional
+  class Nutritional {
+    +calories: float
+  }
+  
   class Weight {
     +value: float
   }
@@ -264,8 +263,8 @@ classDiagram
   }
 
   class Equippable {
-    +neededLimbs: List~LimbType~
-    +occupiedSlots: List~LimbSlot~
+    +neededLimbs: "List<LimbType>"
+    +occupiedSlots: "List<LimbSlot>"
   }
 
   class ObjectiveValue {
@@ -276,7 +275,7 @@ classDiagram
     +entity: ItemEntity
   }
 
-  ItemData --> ItemComponent : has
+  ItemData "1" *-- "*" ItemComponent : components
   ItemComponent <|-- Consumable
   ItemComponent <|-- Flammable
   ItemComponent <|-- Metallic
@@ -286,6 +285,6 @@ classDiagram
   ItemComponent <|-- Equippable
   ItemComponent <|-- ObjectiveValue
   ItemComponent <|-- EntityPrefab
-  MaterialOption --> ItemData : selects
+  MaterialOption "1" -- "1" ItemData : selects
 ```
 

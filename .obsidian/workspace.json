@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Espaço Dev/Arquitetura/UML Docs/+UML Diagram.md",
-                "mode": "preview",
+                "file": "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática out_of_bounds, Atualização do TileManip pra respeitar as bordas.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "+UML Diagram"
+              "title": "0003 Limpeza automática out_of_bounds, Atualização do TileManip pra respeitar as bordas"
             }
           }
         ]
@@ -183,21 +183,23 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Espaço Dev/To-Do/1. Kanban.md",
+    "index.md",
+    "Espaço Dev/Arquitetura/UML/UML Docs/+UML Diagram.md",
+    "Espaço Dev/Arquitetura/UML/UML Docs/+Test.md",
+    "Espaço Dev/Arquitetura/UML/+UML Diagram.canvas",
     "Espaço Dev/Arquitetura/UML/World.md",
     "Espaço Dev/Arquitetura/UML/Scene.md",
     "Espaço Dev/Arquitetura/UML/Map.md",
-    "Espaço Dev/Arquitetura/UML/+UML Diagram.canvas",
     "Devlogs/0. Build Module (en).md",
     "Contato com a equipe/Contato. Gabriel Wessling.md",
-    "index.md",
-    "Espaço Dev/To-Do/1. Kanban.md",
-    "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática de informação fora das bordas do mapa tanto no loading quanto no saving.md",
+    "Espaço Dev/To-Do/Kanban Issues/0003 Limpeza automática out_of_bounds, Atualização do TileManip pra respeitar as bordas.md",
     "Espaço Dev/To-Do/Kanban Issues/Ligação automática de Palette e UI Elements.md",
     "Espaço Dev/To-Do/Kanban Issues/0 task model.md",
     "Template Plugin/criar-novas tarefas.md",
     "Template Plugin",
     "Espaço Dev/To-Do/Kanban Issues",
-    "Espaço Dev/Arquitetura/UML Docs/+UML Índice.md",
+    "Espaço Dev/Arquitetura/UML/UML Docs/+UML Índice.md",
     "Espaço Dev/GDD/1. Visão Geral.md",
     "Espaço Dev/To-Do/Rework - Ferramenta Tile Manipulator.md",
     "Espaço Dev/To-Do/Novo UML.md",
@@ -210,8 +212,6 @@
     "Espaço Dev/To-Do/0. Como utilizar o To-Do.md",
     "Espaço Dev/Utilitário/Markdown Dicas e Testes.md",
     "Espaço Dev/Utilitário/Faltando na Wiki.md",
-    "Espaço Dev/Guia de Contribuição/0. Novos devs começam aqui.md",
-    "Espaço Dev/Guia de Contribuição/1. Acessar o projeto no seu computador.md",
     "Contato com a equipe",
     "Espaço Dev/Guia de Contribuição",
     "Espaço Dev/Engineering",
