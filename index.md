@@ -9,7 +9,7 @@ Caso você seja um novo dev ou apenas um dev perdido, pode começar aqui pra ent
 
 Artigos recomendados:
 - [[1. Visão Geral]]
-- [[+UML Índice]]
+- [[+UML Índice DEPRECATED]]
 
 - [[1. Kanban]] - o que fazer quando não se têm o que fazer.
 ---
